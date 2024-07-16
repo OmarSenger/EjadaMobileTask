@@ -22,6 +22,8 @@ public class scenarios extends baseTest{
     public void failLogin(){
         login_screen = new  LoginScreen(driver);
         login_screen.loginMethod("standard_user2","secret_sauce");
+        WebElement element = driver.findElement(By.xpath("//android.widget.TextView[@text='PRODUCTS']"));
+        Assert.assertFalse(element.isDisplayed());
     }
 
 
